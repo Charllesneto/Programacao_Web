@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>IV Congresso - Campus Ceres</title>
+  <style> /*CSS INTERNO */ 
+    /* ===== Variáveis de cor ===== */
+    :root {
+      --cor-principal: #0c472d;/*Cor do cabeceçalho*/ 
+      --cor-secundaria: #f1f1f1;/*Cor de fundo da pagina*/ 
+      --cor-destaque: #ff9900;/*Cor do hover e Destaques*/
+      --cor-texto: #333;/*Cor do texto*/ 
+    } /*Fechamento de root*/ 
+
+    body { /* Define fonte, cores gerais e espaçamentos*/ 
+      font-family: Arial, sans-serif; /*Fontes - forma degradativa, se não tiver a primeira. vai segunda, se nao a terceira*/ 
+      margin: 0;/*margem*/ 
+      background: var(--cor-secundaria); /* cor de fundo*/ 
+      color: var(--cor-texto);
+    } /*Fechamento Body*/
+
+    header { /*Area superior da Pagina, Geralmente o titulo e menu */
+      background: var(--cor-principal); /*Caixa Quadrada / Cor de fundo */ 
+      color: rgb(190, 231, 206);
+      padding: 6em;/*tamanho da barra / Espaça, espaçamento interno*/   
+      text-align:center; /*Centraliza o texto*/ 
+    }
+
+    nav a {/*Navegação das opções Seleciona links dentro da Tag <nav>*/
+      color: rgb(245, 246, 243); /*Cor do link*/ 
+      margin: 0 10px;/*Espaço horizontal sobre os links*/ 
+      text-decoration: none; /*Remove sublinhado */
+      font-weight: bold; /* Deixa o texto em negrito*/ 
+    }
+
+    .container {
+      width: 50%;
+      max-width: 900px;
+      margin: auto; /*Centraliza horizontalmente*/
+      padding: 25px;/*Espaçamento interno*/ 
+    }
+
+    .card { /* Caixas (quadrados) que aparecem de fundo*/ 
+      background: rgb(143, 216, 123);
+      padding: 20px; /*Espaço Interno */ 
+      margin: 10px 0;/*Espaço Externo*/ 
+      border-radius: 25px; /*Deixa os cantos arredondados*/ 
+      box-shadow: 2px 2px 6px 6px rgba(32, 85, 3, 0.73); /*Sombra atras do card*/ 
+    }
+
+
+    .grid {
+      display: grid;/*Cria um Layout em grade*/
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*Define colunas automaticas*/ 
+      gap: 15px;/*Espaçamentos entre os itens da grade*/
+    }
+
+    .btn { /*Botões*/
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; /*Muda o cursor ao passar o mousse*/ 
+      background: var(--cor-principal);
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn:hover { /*Aplica estilo a botões quando o mouse passa por cima*/
+      background: var(--cor-destaque);
+    }
+
+    footer { /*Define a barra do rodapé, com fundo, texto centralizado e espaçamento*/ 
+      background: var(--cor-principal);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    form .campo { /*Aonde define o início do formulario*/ 
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 3px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== Cabeçalho ===== -->
+  <header>
+    <h1>IV Congresso de Pesquisa e Pós-Graduação - Campus Ceres</h1>
+    <nav> <!-- Contem links de navegação -->
+      <a href="#sobre">Sobre</a> <!-- Link interno que leva a seção com id="SOBRE"; o # indica estar na mesma pagina-->
+      <a href="#programacao">Programação</a>
+      <a href="#inscricao">Inscrições</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ===== Seção Sobre ===== -->
+  <!-- section - Define uma seção do site, neste caso "Sobre o evento"-->
+  <!-- id= permite que o link no menu leve aqui-->
+   
+   <section id="sobre" class="container">
+    <div class="card"> <!-- Aplica toda configuração definida no container (Caixa com fundo colorido, padding, sombra e borda areedondada-->
+      <h2>Sobre o Evento</h2> <!--Subtitulo-->
+      <p>O Congresso reúne estudantes, professores e pesquisadores para compartilhar
+      experiências e resultados científicos. Participe!</p> <!--Paragrafo-->
+    </div>
+  </section>
+
+  <!-- ===== Seção Programação ===== -->
+  <section id="programacao" class="container">
+    <h2>Programação</h2>
+    <div class="grid">
+      <div class="card"><h3>Palestras</h3><p>Discussões sobre ciência e inovação.</p></div>
+      <div class="card"><h3>Minicursos</h3><p>Aprenda na prática com especialistas.</p></div>
+      <div class="card"><h3>Apresentações</h3><p>Exposição de trabalhos acadêmicos.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== Seção Inscrição ===== -->
+  <section id="inscricao" class="container">
+    <h2>Formulário de Inscrição</h2>
+    <form>
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="campo">
+        <label for="tel">Telefone</label>
+        <input type="tel" id="tel" name="tel" placeholder="(99) 99999-9999"
+               pattern="\(\d{2}\)\s?\d{4,5}-\d{4}">
+      </div>
+
+      <div class="campo">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00"
+               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+      </div>
+
+      <div class="campo">
+        <label>Vínculo</label>
+        <input type="radio" name="vinculo" value="Estudante" required> Estudante
+        <input type="radio" name="vinculo" value="Docente"> Docente
+        <input type="radio" name="vinculo" value="Servidor"> Servidor
+        <input type="radio" name="vinculo" value="Externo"> Externo
+      </div>
+
+      <div class="campo">
+        <label for="instituicao">Curso/Instituição</label>
+        <input type="text" id="instituicao" name="instituicao">
+      </div>
+
+      <div class="campo">
+        <label for="participacao">Tipo de participação</label>
+        <select id="participacao" name="participacao" required>
+          <option value="">Selecione</option>
+          <option>Ouvinte</option>
+          <option>Apresentação de Trabalho</option>
+          <option>Minicurso</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Áreas de interesse</label>
+        <input type="checkbox" name="area" value="IA"> Inteligência Artificial
+        <input type="checkbox" name="area" value="Agrarias"> Agrárias
+        <input type="checkbox" name="area" value="Educacao"> Educação
+        <input type="checkbox" name="area" value="Inovacao"> Inovação
+      </div>
+
+      <div class="campo">
+        <label for="nascimento">Data de nascimento</label>
+        <input type="date" id="nascimento" name="nascimento">
+      </div>
+
+      <div class="campo">
+        <label for="turno">Preferência de turno</label>
+        <select id="turno" name="turno">
+          <option>Manhã</option>
+          <option>Tarde</option>
+          <option>Noite</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="minicurso">Escolha de minicurso</label>
+        <select id="minicurso" name="minicurso">
+          <option>Nenhum</option>
+          <option>Minicurso 1</option>
+          <option>Minicurso 2</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="resumo">Upload de resumo (PDF)</label>
+        <input type="file" id="resumo" name="resumo" accept=".pdf">
+      </div>
+
+      <div class="campo">
+        <label for="corcracha">Cor do crachá</label>
+        <input type="color" id="corcracha" name="corcracha">
+      </div>
+
+      <div class="campo">
+        <label for="acessibilidade">Necessidade especial?</label>
+        <textarea id="acessibilidade" name="acessibilidade"></textarea>
+      </div>
+
+      <div class="campo">
+        <input type="checkbox" id="termos" required>
+        <label for="termos">Li e aceito os termos de participação</label>
+      </div>
+
+      <button type="submit" class="btn">Enviar</button>
+      <button type="reset" class="btn">Limpar</button>
+    </form>
+  </section>
+
+  <!-- ===== Rodapé ===== -->
+  <footer id="contato">
+    <p>Contato: congresso@campusceres.edu.br</p>
+    <p>&copy; 2025 Campus Ceres</p>
+  </footer>
+
+</body>
+</html>
