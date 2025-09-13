@@ -1,0 +1,220 @@
+    /*Seletor universal- todas as tag*/ 
+*{
+    margin: 0;
+    padding: 0; 
+}
+    .text-danger{
+        color: red; 
+
+    }
+    .text-sucess{
+        color: green; 
+
+    }
+    .text-primary{
+        color: blue; 
+
+    }
+    .text-secondary{
+        color: gray; 
+
+    }
+    .text-alert{
+        color: yellow; 
+
+    }
+    .text-dark{
+        color: rgb(10, 10, 10); 
+
+    }
+    .text-ligth{
+        color:#f2f2f2; 
+
+    }
+    .text-white{
+        color: white; 
+
+    }
+
+    /*Cores de fundo*/
+
+    .bg-danger{
+        background-color: red; 
+
+    }
+    .bg-sucess{
+        background-color: green; 
+
+    }
+    .bg-primary{
+        background-color: blue; 
+
+    }
+    .bg-secondary{
+        background-color: gray; 
+
+    }
+    .bg-alert{
+        background-color: yellow; 
+
+    }
+    .bg-dark{
+        background-color: rgb(10, 10, 10); 
+
+    }
+    .bg-ligth{
+        background-color:#f2f2f2; 
+
+    }
+    .bg-white{
+        background-color: white; 
+
+    } 
+
+    /*GRID*/
+    .row{
+        width: 100%;
+        display: inline-flex; 
+    }
+    .col-3{
+        width: 25%;
+    }
+
+    /* Estilização de Texto*/
+
+    .text-center{
+        text-align: center;
+    }
+    .titulo1{ 
+        padding-top: 20px;
+        padding-left: 30px;
+        border-bottom: 2px solid blue;
+        font-weight: bold;
+
+    }
+    
+
+    /*Container*/
+
+    .container-fluid{ 
+        width: 100%; 
+        box-sizing: border-box;
+
+    }
+    .container{ 
+        width:80%;
+        margin:0 auto; 
+    }
+
+    /*Exemplo de formatação de layout*/
+
+    .topo{
+        padding: 15px;
+        display: inline-flex;
+    }
+    .logo_esq{
+        height: 70px;
+        width: 20%; 
+    }
+    .nome_site{
+        height: 70px;
+        width: 60%; 
+    }
+    .logo_direita{
+        height: 70px;
+        width: 20%; 
+    }
+
+    /* Menu de Navegação */
+
+    nav{
+        height: 30px;
+        text-align: center;
+    }
+    nav li{
+        display: inline-block; /*Inline, inverte de vertical para horizontal*/ 
+        
+    }
+    /*Textos/link da Nav*/
+    nav li a{
+        text-decoration: none;
+        line-height: 30px;
+        padding: 0 6px;
+        color: orange; 
+    }
+    /*Quando o mouse passar em cima */ 
+    nav li a:hover { 
+        background-color: orange;
+        color:black;
+        display: block;
+    }
+
+    /*Seções do site*/
+
+    .produtos{
+        height: 100vh;
+        overflow: scroll; /*Barra de arrastar do lado*/ 
+    }
+
+    .cards{ /*Bloco Mostrando os preços*/ 
+        margin: 20px 10px;
+        border: 1px solid #333;
+        border-radius: 10px;
+        height: auto;
+        padding: 5px;
+        background-color: white;
+    }
+
+    .card_titulo{ /*Descrição do Produto*/
+        font-size: 1.5rem;
+        padding: 0 5px;     
+    }
+
+    .card_img{/*Imagem*/
+        padding: 5px;
+        width: 100;
+    }
+
+    .card_text{
+        padding: 5px;
+        color: blue;
+        align-items: center;
+    }
+
+    .card_price{
+        padding: 5px;
+        color: red;
+        font-size: 2rem;
+    }
+
+    .card_img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*Botão*/
+    .btn{
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 1.2rem;
+    }
+    .btn-primary{
+        background-color: blue;
+        color: white; 
+        
+    }
+    .btn-primary :hover{
+        background-color: white;
+        color: blue;
+        border: 1px solid blue; 
+
+    }
+
+
+    /*Rodapé*/ 
+    footer{
+        height: 100px;
+        padding-top: 35px;
+    }
+
+    
