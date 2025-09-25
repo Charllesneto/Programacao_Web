@@ -216,5 +216,36 @@
         height: 100px;
         padding-top: 35px;
     }
+    
+    /* Respansividade*/
+     @media(min-width: 100px) and (max-width: 640px){
+        /*Menu de navegação apartir da linha 130 */
+    nav{
+        height: 100%;
+    }
+    nav li{
+        display: block; 
+    }
+    .container{
+        width: 100%;
+    }
+    .row{
+        width: 100%;
+        display: block; 
+    }
+    .col-3{
+        width: 100%;
+        display:block; 
+    }
+    
+    .produtos{
+        height: 100%;
+    }
+
+    .cards{
+        width:100%;
+    
+    }
 
     
+     }
